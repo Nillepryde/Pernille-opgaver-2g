@@ -1,35 +1,45 @@
 //variable deklaration
+//dekleration af billedet
 PImage img;
+PImage photo;
 
 void setup(){
-  size(400,600);
-  img = loadImage("loevbjerg-logo-med-bund.png"); 
+  size(400,700);
+  img = loadImage("loevbjerg-logo-med-bund.png"); //fortæller hvilket billed den skal tage, billedet skal være i samme mappe som denne IDE
+  photo = loadImage("Stregkode.png");
+    
 }
 
 void draw(){
   background(255);//gør bagrunden hvid
-  image(img,45, height-600);
+  image(img,45, height-700);//indsætter billed af løvbjerg logo
+  image(photo,33,550);
   
+  //gør teksten sort og sætter størelsen på tekst
   fill(0,0,0);//gør teksten sort
   textSize(20);//sætter størelsen på teksten
+  
+  //skriver adresse, postnummer, land, tlf og betjent af, og en linje under det
   text("H P Hansens Gade 41",20,120);//;//skriver tekst og hvor henne i canvas det skal skrives
   text("6200 Aabenraa, Danmark",20,140);
   text("TLF: 96132140",20,160);
   text("Betjent af: Marianne Lorenzen",20,200);
   line(15,210,385,210);//laver en linje
   
+  // skriver antal, vare og prisen i dkk og hvor henne det skal være
   text("Antal", 20,240);
   text("Vare",160,240);
   text("Pris i DKK",305,240);
   
-  
+  //beregning af pris for æbler med moms
   int antal1 = 3;
   text(antal1,20,261);
   text("Æble",160,261);
   int pris1 = 2;
   int fuldpris1 = pris1 * antal1;
-  text(fuldpris1,370,261);
+  text(fuldpris1,375,261);
   
+  //beregning af pris for vindruer med moms
   int antal2 = 1;
   text(antal2,20,280);
   text("vindruer",160,280);
@@ -37,6 +47,7 @@ void draw(){
   int fuldpris2 = pris2 * antal2;
   text(fuldpris2,365,280);
   
+  //beregning af pris for SnackPots med moms og skriver det som tekst i canvas
   int antal3 = 2;
   text(antal3,20,300);
   text("SnackPots",160,300);
@@ -44,10 +55,54 @@ void draw(){
   int fuldpris3 = pris3 * antal3;
   text(fuldpris3,365,300);
   
-  line(15,320,20,320);
-  line(25,320,30,320);
+  //stiblet linje
+  text("- - - - - - - - - - - - - - - - - - - - - - - -",15,325);
   
+  //beregning af den totale pris med moms
   text("Total",20,347);
   int total = fuldpris1 + fuldpris2 + fuldpris3;
-  text(total,365,347);
+  text(total,370,347);
+  
+  text("Her af moms",20,367);
+  text("Beløb uden moms",20,387);
+  
+  //skriver beløbet uden moms i canvas
+  float undenMoms = beregnUdenMoms(total);
+  text(undenMoms,330,387);
+  
+  //skriver beløbet af momsen i canvas
+  int udenMoms = 32;
+  float Moms = beregnMoms(udenMoms);
+  text(Moms,340,367);
+  
+  //laver den nederste linje
+  line(15,393,385,393);
+  
+  //Dato
+  int d=day();
+  int m=month();
+  int y=year();
+  int h=hour();
+  int min=minute();
+  
+  String dato = String.format(d+"/"+m+"-"+y+"      "+h+":"+min);
+  text(dato,20,430); 
+  
+  //bon nr
+  text("Bon nr.: 00000P26600289844",20,450);
+  
+  //tekt "på gensyn"
+  textSize(40);//sætter størelsen på teksten
+  text("På gensyn",100,520);
+  
+}
+
+//beregning af moms
+float beregnMoms(int beløb){
+  return beløb*0.25;
+}
+  
+  //beregning af beløb uden moms
+ float beregnUdenMoms(int fuldbeløb){
+   return fuldbeløb*0.8;
 }
