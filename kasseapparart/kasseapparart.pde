@@ -20,13 +20,23 @@ void draw(){
   
   
   int antal1 = 3;
-  text(antal1,20,240);
-  text("Æble",160,240);
+  text(antal1,20,241);
+  text("Æble",160,241);
   int pris1 = 2;
-  
   int fuldpris1 = pris1 * antal1;
-  text(fuldpris1,370,240);
+  text(fuldpris1,370,241);
   
   int antal2 = 1;
-  text(antal2,20,280);
+  text(antal2,20,260);
+  text("vindruer",160,260);
+  int pris2 = 14;
+  int fuldpris2 = pris2 * antal2;
+  text(fuldpris2,365,260);
+  
+  int antal3 = 2;
+  text(antal3,20,280);
+  text("snackPots",160,280);
+  int pris3 = 10;
+  int fuldpris3 = pris3 * antal3;
+  text(fuldpris3,365,280);
 }
