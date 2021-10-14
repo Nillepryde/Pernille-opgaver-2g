@@ -1,62 +1,50 @@
-//Vi trækker håndbremsen, stopper op, og reflekterer over hvad vi har lært 'so far'. 
+/*
 
-//Computere arbejder med 0,1 og alt basserer sig på det binæretalsystem. Det betyder at alt funktionalitet baserer sig på booskalgebra, AND, OR og NOT. De nøgleord bruger vi også når vi programmerer. 
+Vi trækker håndbremsen, stopper op, og reflekterer over hvad vi har lært 'so far'. 
 
-//I har lavet en liste med ord og udtryk:
+Computere arbejder med 0,1 og alt basserer sig på det binæretalsystem. Det betyder at alt funktionalitet 
+baserer sig på booskalgebra, AND, OR og NOT. De nøgleord bruger vi også når vi programmerer. 
 
-//Instruktion
-//Sekvens
-//Funktion
-//Kontrolstruktur
-//Betingelser
-//Forgrening
-//Løkke
-//Variabel (https://data-flair.training/blogs/java-data-types/)
-  //ikke primitive
-   // a. String
-  //  b. Array
-  //  c. klasser
-   // d. Interfaces  
-//  Primitive
-//    a. Int
-//    b. Float
-//    c. Char
-//    d. Boolean
-//    e. Byte
-//    f. Short
-//    g. long
-//    h. Double.
-//Funktion
-//Initiering
-//Deklaration
-//Parameter
+I har lavet en liste med ord og udtryk:
 
-//Cammelback notation
+Instruktion -en række med koder som giver en instruktion
+Sekvens - flere instruktioner (kommando)
+Funktion - En funktion giver y
+Kontrolstruktur - for at man kan bestemme hvordan et program skal fungere skal man bruge kontrolstukture for at kunne styre programmet, det vil sige at man her kan bruge if/else funktionen
+Betingelser - En betingelse skal være opfyldt. den kan være sand eller falsk, if/else. Det er en boolian
+Forgrening - Det er en sidevej/forgrening som løber paralelt med hovedprogrameringen, som man kan lave rettelser eller andet i uden der sker noget i hovedprogrameringen 
+Løkke - repetition
+Variabel (https://data-flair.training/blogs/java-data-types/) - en værdi som kan ændre sig
+   ikke primitive
+      a. String - en linje af karakter. det er et array af char.
+      b. Array - [], en række af værdier
+      c. klasser - Består af variabler og funktioner. en generel beskrivelse af virkeligheden. 
+      d. Interfaces - en ekstraklasse der giver adgang til en anden klasse
+   Primitive
+      a. Int - Et helt tal. Den bestemmer hvor meget man skal gøre noget
+      b. Float - Det er et kommatal
+      c. Char - en karakter
+      d. Boolean - Det er en betingelse
+      e. Byte - en byte består af  bit
+      f. Short - det er 2 bytes
+      g. long - en forlængelse af  heltal/ int
+      h. Double - en dublering af kommatal/float
+Initiering - tildeling af værdi
+Deklaration - bestemmelse af indhold
+Parameter -et område hvor man bestemmer variabler til funktioner fx int måned = month()
+Cammelback notation - Det er når man skriver en flere sammenhængde ord, skriver man det første bogstav i hvert ord med stort bogstav istedet for at lave mellemrum
 
-//Denne opgave handler om at forstå de forskellige datatyper.
+Denne opgave handler om at forstå de forskellige datatyper.
 
-//Opgave 4:
-//  a) Undersøg for hver primitiv datatype, hvor meget plads (bytes) der allokeres i hukommelsen når man deklarerer en variabel af datatypen. 
-//(find svaret her https://data-flair.training/blogs/java-data-types/). Noter alle dine resultater
-//           int = 4 bytes
-//         float = 4 bytes
-//          char = 2 bytes  
-//       boolean = 1 byte
-//          byte = 8 bytes ????
-//         short = 2 bytes ???
-//          long = 8 bytes
-//        double = ????
-//  b) Skriv et program som ved hjælp af funktioner, beviser hvilke minimums- og maksimumsværdier for de primitive datatype kan indeholde.Find evt. inspiration i programmet testDatatyper, som du finder på github. Noter alle dine resultater
-//        Det jeg skriver nu er det som christian har skrevet som inspiration på github --> uge 41 --> testDatatyper
-void setup(){
-  noLoop();
-}
-void draw(){
-  testint(37500);
-}
-void testint(int x){
-  println(x);
-}
-//  d) De to datatyper float og double er ikke lige nøjagtige. 
-// Det kan de se hved følgende opgave: Hvad giver kvadratroden af 2 gange med kvadratroden af 2? 
-// Lav et først et program med sqrt() som returnerer en float og herefter med Math.squrt() som returnerer en double. Forklar forskellen på de to funktioner og redegør for resultatet af de to instruktioner. 
+Til dette skal du opstille en tese (et vildt, men kompetent gæt) for min og max værdi af hver primitiv data type
+      a. Int -        max 2^31 ,   min -2^31
+      b. Float -      max 2^28 ,   min -2^28
+      c. Char -       max 128  ,   min 0
+      d. Boolean -    max 2^61 ,   min -2^61
+      e. Byte -       max 128  ,   min 
+      f. Short -      max 
+      g. long -
+      h. Double - 
+
+
+/*
