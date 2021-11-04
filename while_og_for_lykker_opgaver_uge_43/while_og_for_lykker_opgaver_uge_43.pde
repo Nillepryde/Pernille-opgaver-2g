@@ -56,59 +56,84 @@ Opgave:
 Vi har talt om, at string har et index. Hvis vi har en løkke kan vi gennemløbe en string og se på det enkelte bogstav på i-plads.
 
 Slå op i dokumentationen for processing og læs om string(). Nederst er der en række metoder som kan benyttes sammen med en string. Nå datatype starter med stort bogstav, vil der altid være metoder i kan bruge. Man bruger metoderne sammen med variabel navnet. F.eks. hvis str er defineret som datatype String, så kan man skrive: str.charAt(i);
+*/
 
-
-1) Lav henholdsvis en for-løkke og en while-løkken som udskriver de første 5. karakterer i sætningen "Hej med dig!". Tip, brug   
-charAt() sammen med din tæller i.
+//1) Lav henholdsvis en for-løkke og en while-løkken som udskriver de første 5. karakterer i sætningen "Hej med dig!". Tip, brug   
+//charAt() sammen med din tæller i.
+println("Opgave 1");
 
 //while-løkke
+println("while-løkke");
 String s ="hej med dig";
 boolean fundet =false;
+
 int i = 0;
 while(!fundet){
   if(s.charAt(i)=='m')
   {fundet=true;}
-  println(s.charAt(i));
+  print(s.charAt(i));
   i++;
 }
+println();
+ println("for-løkke");  
 //for-lykke
-for (int a = 0; a<s.length(); a++)
-{
+for (int a = 0; a<s.length(); a++){
   if (s.charAt(a)==' ')
   {
     fundet=true;
-    println(s.charAt(a));
+    print(s.charAt(a));
   }
 }
 
+//2) Lav henholdsvis en for-løkke og en while-løkken som skal gennem løbes 30 gange. 
+//   Start med i=0; og tæl i op hver gang du løber gennem løkken. Den skal kun udskrive i, når i er mellem værdien 10 til og med 20.
+println();
+println("opgave 2");
+//for-løkke
+println("for-løkke");
+for(int b=0;b<30;b++){
+  if(b>9&&b<21){//|
+  println(b);
+  }
+  else{
+    print("*");
+  }
+}
+//while-løkke
+println();
+println("while-løkke");
+int c=0;
+while(c<30){
+  if(c>9&&c<21){//|
+  println(c);
+  }
+  c++;
+}
 
-2) Lav henholdsvis en for-løkke og en while-løkken som skal gennem løbes 30 gange. Start med i=0; og tæl i op hver gang du løber gennem løkken. Den skal kun udskrive i, når i er mellem værdien 10 til og med 20.
-*/
-int t=0;
-String s="hej med dig";
 
-/*
-3) Lav henholdsvis en for-løkke og en while-løkken som skal finde alle e'er i sætningen: 
-"Dette er en sætning som indeholder mange e'er. Men hvor mange er der?"
-Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fundet.
 
-4) Lav et program som udskriver bogstaverne fra position: 39,19,41,6,4,16,6,16,35,99,41,48,99,95 til skærmen. Brug sætningen "Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fundet. Ja, så er det rigtigt :)"
-5) Lav et program som kan udskrive længden af overstående sætning.
-6) Lav et program som klipper i vores streng. Den skal tage fra position 83 og til slut. Udskriv den nye streng.
-7) Lav et program som klipper i vores streng. Den skal tage fra position 83 og til 85. Udskriv den nye streng.
-8) Lav hele sætningen om til store bogstaver og udskrive den.   
-9) Lav hele sætningen om til små bogstaver og udskrive den.
-10) læs og forstå følgende program:
 
-String str2 =  "Nej";
-if (str2.equals("ja"))
-  println ("Det gør den!");
- else
-  println ("Det gør den ikke!");
+//3) Lav henholdsvis en for-løkke og en while-løkken som skal finde alle e'er i sætningen: 
+//"Dette er en sætning som indeholder mange e'er. Men hvor mange er der?"
+//Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fundet.
+
+//4) Lav et program som udskriver bogstaverne fra position: 39,19,41,6,4,16,6,16,35,99,41,48,99,95 til skærmen. 
+//   Brug sætningen "Løkken skal udskrive alle e'er og tilsidst udskrive hvor mange e'er som er fundet. Ja, så er det rigtigt :)"
+
+//5) Lav et program som kan udskrive længden af overstående sætning.
+//6) Lav et program som klipper i vores streng. Den skal tage fra position 83 og til slut. Udskriv den nye streng.
+//7) Lav et program som klipper i vores streng. Den skal tage fra position 83 og til 85. Udskriv den nye streng.
+//8) Lav hele sætningen om til store bogstaver og udskrive den.   
+//9) Lav hele sætningen om til små bogstaver og udskrive den.
+//10) læs og forstå følgende program:
+
+//String str2 =  "Nej";
+//if (str2.equals("ja"))
+//  println ("Det gør den!");
+// else
+//  println ("Det gør den ikke!");
  
-a) hvad udskriver programmet?
-b) hvordan kan du få programmet til at udskrive det modsatte af, hvad den gør nu?
+//a) hvad udskriver programmet?
+//b) hvordan kan du få programmet til at udskrive det modsatte af, hvad den gør nu?
 
-Upload jeres løsning til Github
-
-*/
+//Upload jeres løsning til Github
