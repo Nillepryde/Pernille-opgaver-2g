@@ -15,7 +15,7 @@ class Firkant {
 
   // tegn firkant på canvas
   void drawFirkant() {
-    fill(random(255), random(255), random(255));
+    fill(random(256), random(256), random(256));
     square(x, y, o);
   }
 }
